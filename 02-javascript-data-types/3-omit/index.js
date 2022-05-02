@@ -7,9 +7,15 @@
 export const omit = (obj, ...fields) => {
   const result = {};
 
+<<<<<<< HEAD
   for (const [key, value] of Object.entries(obj)) {
     if (!fields.includes(key)) {
       result[key] = value;
+=======
+  for (const key of Object.keys(obj)) {
+    if (!fields.includes(key)) {
+      result[key] = obj[key];
+>>>>>>> 8d9ac9f8a187baec113db88380c25e0a52be9df8
     }
   }
 
